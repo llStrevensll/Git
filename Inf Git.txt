@@ -1,0 +1,118 @@
+======================================
+Structure folder .git
+
+objects -> Commits, Files and Folders
+refs -> {heads, remotes} - branchs 
+        tags
+
+file HEAD - reference to branch, tag or commit from workspace
+
+index - list changes
+config
+hooks - scripts
+--------------------
+local:
+cat .git/refs/heads/master   or   cat .git/refs/heads/main
+remote:
+cat .git/refs/remotes/origin/main
+ 
+
+
+//Rama de seguimiento tiene relacion directa con una rama de seguimiento remoto
+-u   -> cree rama de seguimiento remoto y enlace la esta rama
+git push -u origin mi-rama
+
+git branch -set-upstream-to=origin/master master
+
+//obtener ramas de seguimiento remoto
+git fetch origin
+
+
+//guardar temporalmente
+git stash
+git stash list
+git stash pop  //recuperar files
+
+
+//Cambiar ultimo commit - ammend
+git commit --ammend
+
+
+
+=============================================
+Reset
+//Deshacer cambios del area de staging y del espacion de trabajo
+Tambien permite retroceder en la historia de commits
+soft reset - deja los cambios en el espacio de trabajo
+git reset <commit>
+
+hard reset
+git reset --hard <commit>
+
+git reset HEAD^  //Padre del commit head (head apunta a una rama - la rama apunta a un commit)
+
+git reset HEAD~3 //Varios commits previos
+=============================================
+Rebase
+Actualizar rama respecto a la principal u otra (similar a merge)
+rebase: Reescribir la historia de commits (mover, eliminar, cambiar mensajes, etc)
+
+//HEAD~3 - commit base para reescribir 
+//ultimo commit mas reciente  
+git rebase -i HEAD~3
+
+git rebase -i HEAD~20
+
+git rebase --abort
+
+Commands:
+  p, pick
+  r, reword
+  e, edit
+  s, squash
+  f, fixup
+  x, exec
+=============================================
+Reflog
+Mantiene un registro de todos los cambios sobre las ramas y el HEAD
+
+git reflog
+
+git checkout HEAD@{3}
+=============================================
+c:\Users\Admin\.ssh 
+ssh-keygen
+/c/Users/Admin/.ssh/id_rsa_test
+.shh -> private and public key 
+config -> file config
+
+#Default Github
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+Host github-test
+  HostName github.com
+  User git
+  IdentityFile ~/.shh/id_rsa_test
+==============================================
+git show
+
+git log --oneline --decorate --all --graph
+
+git remote set-url origin <repo>
+
+==============================================
+1. git init
+2. git add .
+3. git reset .
+4. git commit 
+5. git checkout -- .
+6. git log
+7. git commit --amend
+8. git checkout -b rama-name
+9. git checkout master
+10. git branch -d rama-name
+11. git push
+12. git commit -am
