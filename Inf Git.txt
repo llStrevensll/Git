@@ -1,4 +1,4 @@
-======================================
+======================================Testing develop1, Testing 2, testing 3,, featureetest, feature2, feature3,,feature4, feature 5
 Structure folder .git
 
 objects -> Commits, Files and Folders
@@ -52,6 +52,9 @@ git reset --hard <commit>
 git reset HEAD^  //Padre del commit head (head apunta a una rama - la rama apunta a un commit)
 
 git reset HEAD~3 //Varios commits previos
+
+git push --force
+git push -f
 =============================================
 Rebase
 Actualizar rama respecto a la principal u otra (similar a merge)
@@ -116,3 +119,10 @@ git remote set-url origin <repo>
 10. git branch -d rama-name
 11. git push
 12. git commit -am
+
+
+
+-------
+git tag 1.0.0
+git tag
+git push --tags
