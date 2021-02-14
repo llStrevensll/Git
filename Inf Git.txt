@@ -52,6 +52,9 @@ git reset --hard <commit>
 git reset HEAD^  //Padre del commit head (head apunta a una rama - la rama apunta a un commit)
 
 git reset HEAD~3 //Varios commits previos
+
+git push --force
+git push -f
 =============================================
 Rebase
 Actualizar rama respecto a la principal u otra (similar a merge)
