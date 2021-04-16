@@ -60,11 +60,17 @@ Rebase
 Actualizar rama respecto a la principal u otra (similar a merge)
 rebase: Reescribir la historia de commits (mover, eliminar, cambiar mensajes, etc)
 
+
+https://elcodigok.blogspot.com/2014/03/cambiar-mensaje-commit-en-git.html
+
+
 //HEAD~3 - commit base para reescribir 
 //ultimo commit mas reciente  
 git rebase -i HEAD~3
 
 git rebase -i HEAD~20
+git commit --amend -m "New message"
+git rebase --continue
 
 git rebase --abort
 
