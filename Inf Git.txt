@@ -35,7 +35,7 @@ git stash pop  //recuperar files
 
 
 //Cambiar ultimo commit - ammend
-git commit --ammend
+git commit --amend
 
 
 
