@@ -82,6 +82,13 @@ Commands:
   f, fixup
   x, exec
 =============================================
+merge
+You can run your tests, make sure the hotfix is what you want, and finally merge the hotfix branch back into your master branch to deploy to production. 
+You do this with the git merge command
+
+git checkout master
+git merge hotfix
+=============================================
 Reflog
 Mantiene un registro de todos los cambios sobre las ramas y el HEAD
 
