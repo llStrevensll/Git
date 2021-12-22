@@ -89,6 +89,15 @@ You do this with the git merge command
 git checkout master
 git merge hotfix
 =============================================
+tag  https://git-scm.com/book/en/v2/Git-Basics-Tagging
+
+git tag
+v0.1
+v1.3
+v1.4
+
+git show v1.4
+=============================================
 Reflog
 Mantiene un registro de todos los cambios sobre las ramas y el HEAD
 
